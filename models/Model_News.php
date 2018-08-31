@@ -22,6 +22,7 @@ class Model_News extends Db
 
     public function getNewsList()
     {
+
         $result = $this->connection->query(
             "SELECT *
                  FROM news

@@ -15,15 +15,13 @@ class NewsController extends Controller
     public function actionIndex($category = NULL)
     {
         try {
-            //var_dump($this->view); die;
 
-            $result = $this->newsModel->getNewsList();
 
-            $this->view->news = ['Vadim', '21'];
-            $this->view->some_data = 'Hello World';
-            //var_dump($this->view); die;
-//            $this->view->time = time();
-//            $this->view->count = count($result);
+
+            $this->view->news = $this->newsModel->getNewsList();
+            $this->view->some_data = 'Hello world';
+
+
 
             $this->view->generate('template_view.php', 'news/index.php');
         } catch (Exception $e) {

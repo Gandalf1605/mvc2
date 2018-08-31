@@ -1,8 +1,10 @@
 Начало контента
 
-<?
-var_dump($this->news);
-var_dump($this->some_data);
-?>
+
+<? foreach ($this->news as $news): ?>
+    <h3><?= $news['news_title'] ?></h3>
+    <p><?= $news['news_content'] ?></p>
+<? endforeach; ?>
+
 
 Конец контента
